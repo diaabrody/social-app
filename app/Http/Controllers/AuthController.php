@@ -85,7 +85,6 @@ class AuthController extends Controller
                 'password'=>$validParams['password']
             ]));
         }catch (\Exception $e){
-            var_dump($e->getMessage());
             report($e);
            return $this->respondWithUnexpectedError('An Error Occured While Register User');
         }
